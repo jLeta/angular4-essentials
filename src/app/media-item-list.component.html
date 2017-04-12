@@ -1,0 +1,16 @@
+<section>
+
+    <!--          
+        1. notice the binding of each mediaItem to [mediaItemToWatch] this is declared as input in 
+        media-item.component.ts. this will assign the value to mediaItem object in media-item.component.ts
+        This was a different mediaItem will be rendered (i.e with different detail)
+        by the ngFor of media-item directive. 
+
+        2. notice the use of ngClass how different classes are applied to each media Item depending on the 
+           media type (different css is applied for movies and series)
+        -->
+    <media-item *ngFor="let mediaItem of mediaItems" [mediaItemToWatch]="mediaItem" 
+    (deleted)="onMediaItemDeleted($event)"
+     [ngClass]="{'medium-movies': mediaItem.medium === 'Movies', 'medium-series': mediaItem.medium === 'Series'}">
+    </media-item>
+</section>
