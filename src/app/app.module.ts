@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
-import { MediaItemListComponent  } from './media-item-list.component';
-import {FavoriteDirective} from './favorite.directive';
+import { MediaItemListComponent } from './media-item-list.component';
+import { MediaItemFormComponent } from './media-item-form.component';
+import { FavoriteDirective } from './favorite.directive';
+import { catagoryListPipe } from './catagory-list.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent, MediaItemComponent, MediaItemListComponent, FavoriteDirective
+    AppComponent, MediaItemComponent, MediaItemListComponent, MediaItemFormComponent, FavoriteDirective, catagoryListPipe
   ],
   imports: [
     BrowserModule,

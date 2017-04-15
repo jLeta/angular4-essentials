@@ -2,6 +2,7 @@
 import { Component , Input, Output, EventEmitter} from '@angular/core';
 import {FavoriteDirective} from './favorite.directive';
 
+
 @Component({
     selector: 'media-item',
     templateUrl: './media-item.component.html',

@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {MediaItemComponent} from './media-item.component';
+import {catagoryListPipe} from './catagory-list.pipe';
+
 
 @Component({
     selector: 'media-item-list',
