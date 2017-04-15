@@ -5,10 +5,15 @@
     <div>{{mediaItem.year}}</div>
     <div class="tools">
         <!-- 
-            notice how mwFavorite will activated class style called: is-favorite in favorite.directive.ts 
-            and notice the curly [ ] brance around mwFavorite will call the setter in favorite.directive.ts
-            passing the value mediaItem.isFavorite as parameter. 
-        
+            notice how mwFavorite will activated css classes favorite.directive.ts, 
+            all the css class binding evaluted to true will be included. 
+
+            and notice the curly [ ] brance around mwFavorite, which says a value need to be binded here. 
+            it evaluates [mwFavorite] to css classes : (is-favorite, is-favorite-hovering, etc..)
+            when mediaItem.isFavorite = true. 
+            to evaluate this expression, angular framework calls the setter method passing value of            
+            passing the value of mediaItem.isFavorite as a parameter. 
+            Or calls the corresponding method when any of the even we are listening to occure.         
         -->
         <svg 
         [mwFavorite] = "mediaItem.isFavorite"
